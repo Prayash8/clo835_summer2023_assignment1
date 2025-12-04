@@ -1,31 +1,5 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Group 1 Final Project</title>
-    <style>
-        body { 
-            background-image: url("{{ url_for('static', filename=background_image) }}"); 
-            background-size: cover; 
-            font-family: sans-serif; 
-        }
-        .header { 
-            background: rgba(255,255,255,0.95); 
-            padding: 20px; 
-            text-align: center; 
-            margin-top: 50px; 
-            border-radius: 10px; 
-            width: 60%; 
-            margin-left: auto; 
-            margin-right: auto;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <h1>Welcome to {{ student_name }}'s Final Project</h1>
-        <h3>CLO835 - Group 1</h3>
-        <p>Status: Flask App Running on Port 81</p>
-    </div>
-</body>
+<head><style>body{background-image:url("{{url_for('static',filename=background_image)}}");background-size:cover;text-align:center;padding:50px;font-family:sans-serif;} .box{background:white;padding:20px;display:inline-block;border-radius:10px;}</style></head>
+<body><div class="box"><h1>{{ student_name }}'s Final Project</h1><p>Flask on Port 81</p></div></body>
 </html>
