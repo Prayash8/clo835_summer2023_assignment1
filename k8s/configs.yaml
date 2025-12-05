@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Secret
+metadata: { name: mysql-secrets, namespace: final }
+type: Opaque
+data: { username: cm9vdA==, password: cGFzc3dvcmQ= }
+---
+apiVersion: v1
+kind: ConfigMap
+metadata: { name: app-config, namespace: final }
+data:
+  db-host: "mysql-service"
+  db-name: "employees"
+  s3-bucket: "clo835-group1-final-bucket-prayash"
+  s3-image-filename: "background.jpg"
+  student-name: "Group 1 Final Project"

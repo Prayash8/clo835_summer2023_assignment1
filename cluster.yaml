@@ -1,0 +1,9 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+metadata: { name: group1-cluster, region: us-east-1 }
+iam: { withOIDC: false, serviceRoleARN: "arn:aws:iam::533267189120:role/LabRole" }
+managedNodeGroups:
+  - name: worker-nodes
+    instanceType: t3.medium
+    desiredCapacity: 2
+    iam: { instanceRoleARN: "arn:aws:iam::533267189120:role/LabRole" }
